@@ -1,0 +1,43 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "Hey", "Is anyone there?", "Hello", "Hay"],
+     "responses": ["Hello", "Hi", "Hi there"]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye"],
+     "responses": ["See you later", "Have a nice day", "Bye! Come back again"]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks for the help"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure", "You're most welcome!"]
+    },
+    {"tag": "about",
+     "patterns": ["Who are you?", "What are you?", "Who you are?" ],
+     "responses": ["I'm MovieBot, your movie recommendation assistant", "I'm MovieBot, a Movie Recommender bot"]
+    },
+    {"tag": "name",
+    "patterns": ["what is your name", "what should I call you", "whats your name?"],
+    "responses": ["You can call me MovieBot.", "I'm MovieBot!", "Just call me MovieBot"]
+    },
+    {"tag": "recommendation",
+    "patterns": ["Can you recommend me a movie?", "What movie should I watch?", "Suggest me a movie", "What are the best movies to watch?", "Can you suggest me a movie to watch?"],
+    "responses": ["Sure, I can help you with that. What genre are you interested in?", "I can help you with that. What genre are you interested in?", "Sure, I can help you with that. What genre do you prefer?"]
+    },
+    {"tag": "liked_movie",
+    "patterns": ["I liked the movie", "I loved the movie", "I enjoyed the movie", "I liked it", "I loved it", "I enjoyed it"],
+    "responses": ["I'm glad you liked it. Would you like me to recommend you another movie?", "I'm happy that you liked it. Would you like me to suggest you another movie?", "That's great! Would you like me to recommend you another movie?"]
+    },
+    {"tag": "disliked_movie",
+    "patterns": ["I didn't like the movie", "I hated the movie", "I didn't enjoy the movie", "I didn't like it", "I hated it", "I didn't enjoy it"],
+    "responses": ["I'm sorry that you didn't like it. Would you like me to recommend you another movie?", "I'm sorry to hear that. Would you like me to suggest you another movie?", "That's unfortunate. Would you like me to recommend you another movie?"]
+    },
+    {"tag": "genre",
+    "patterns": ["Action", "Adventure", "Comedy", "Crime", "Drama", "Fantasy", "Historical", "Horror", "Mystery", "Romance", "Science Fiction", "Thriller", "Western"],
+    "responses": ["Great choice! Here are some recommendations for you:", "Nice choice! Here are some recommendations for you:", "Awesome choice! Here are some recommendations for you:"]
+    },
+    {"tag": "comedy",
+    "patterns": ["I want to watch a comedy movie", "I like Comedy movies", "I love Comedy movies", "I enjoy Comedy movies"],
+    "responses": ["Great choice! Here are some Comedy movies you might like:", "Nice choice! Here are some Comedy movies you might like:", "Awesome choice! Here are some Comedy movies you might like:"]
+    }
+]
+}
