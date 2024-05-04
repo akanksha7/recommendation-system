@@ -1,6 +1,5 @@
 import streamlit as st
 from streamlit.logger import get_logger
-from train import train_model
 import keras
 import json
 import nltk
@@ -12,7 +11,7 @@ import random
 LOGGER = get_logger(__name__)
 
 lemmatizer = WordNetLemmatizer()
-# train_model()
+
 # load words object
 words = pickle.load( open('words.pkl', 'rb'))
 
@@ -34,35 +33,28 @@ def run():
     
     # parameters
     max_len = 20
-    cols = st.columns(2)
-    with cols[0]:
-   # Code for column 1
-        option = st.selectbox('How would you like to be contacted?',('Email', 'Home phone', 'Mobile phone'))
-        st.write('You selected:', option)
+   
+    # Initialize chat history
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
 
-    with cols[1]:
-        # Code for column 2
-        # Initialize chat history
-        if "messages" not in st.session_state:
-            st.session_state.messages = []
+    # Display chat messages from history on app rerun
+    for message in st.session_state.messages:
+        with st.chat_message(message["role"]):
+            st.markdown(message["content"])
 
-        # Display chat messages from history on app rerun
-        for message in st.session_state.messages:
-            with st.chat_message(message["role"]):
-                st.markdown(message["content"])
+    # React to user input
+    if prompt:= st.chat_input("Hey! Here are some movie recommendations for you. What are you in the mood for?"):
+        st.chat_message("user").markdown(prompt)
+        # Add user message to chat history
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        ints = predict_class(prompt)
+        result = get_response(ints, intents)
+        with st.chat_message("assistant"):
+            st.markdown(result)
 
-        # React to user input
-        if prompt:= st.chat_input("Hey! Here are some movie recommendations for you. What are you in the mood for?"):
-            st.chat_message("user").markdown(prompt)
-            # Add user message to chat history
-            st.session_state.messages.append({"role": "user", "content": prompt})
-            ints = predict_class(prompt)
-            result = get_response(ints, intents)
-            with st.chat_message("assistant"):
-                st.markdown(result)
-
-            # Add assistant response to chat history
-            st.session_state.messages.append({"role": "assistant", "content": result})
+        # Add assistant response to chat history
+        st.session_state.messages.append({"role": "assistant", "content": result})
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)

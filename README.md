@@ -1,7 +1,17 @@
-# Welcome to streamlit
+# AI_Mini_Project
 
-This is the app you get when you run `streamlit hello`, extracted as its own app.
+##  Create a non-generative AI system that will recommend movies or TV shows
+for users to watch based on their preferences and platform subscriptions (Netflix, Hulu,
+etc.). Integrate this model into a chat bot that can have a conversation to best recommend
+what to watch!
 
-Edit [Hello.py](./Hello.py) to customize this app to your heart's desire. ❤️
+## Getting started
 
-Check it out on [Streamlit Community Cloud](https://st-hello-app.streamlit.app/)
+### Install python package requirements
+    pip install -r requirements.txt
+
+### Train chatbot
+    python train.py
+
+### Launch application
+    streamlit run movieBot.py

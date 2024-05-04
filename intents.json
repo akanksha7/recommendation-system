@@ -25,19 +25,23 @@
     },
     {"tag": "liked_movie",
     "patterns": ["I liked the movie", "I loved the movie", "I enjoyed the movie", "I liked it", "I loved it", "I enjoyed it"],
-    "responses": ["I'm glad you liked it. Would you like me to recommend you another movie?", "I'm happy that you liked it. Would you like me to suggest you another movie?", "That's great! Would you like me to recommend you another movie?"]
+    "responses": ["I'm glad you liked it.", "I'm happy that you liked it.", "That's great!"]
     },
     {"tag": "disliked_movie",
     "patterns": ["I didn't like the movie", "I hated the movie", "I didn't enjoy the movie", "I didn't like it", "I hated it", "I didn't enjoy it"],
-    "responses": ["I'm sorry that you didn't like it. Would you like me to recommend you another movie?", "I'm sorry to hear that. Would you like me to suggest you another movie?", "That's unfortunate. Would you like me to recommend you another movie?"]
-    },
-    {"tag": "genre",
-    "patterns": ["Action", "Adventure", "Comedy", "Crime", "Drama", "Fantasy", "Historical", "Horror", "Mystery", "Romance", "Science Fiction", "Thriller", "Western"],
-    "responses": ["Great choice! Here are some recommendations for you:", "Nice choice! Here are some recommendations for you:", "Awesome choice! Here are some recommendations for you:"]
+    "responses": ["I'm sorry that you didn't like it. Here are some other suggestions", "I'm sorry to hear that. Here are some other movies you might", "That's unfortunate.Here are some other suggestions"]
     },
     {"tag": "comedy",
     "patterns": ["I want to watch a comedy movie", "I like Comedy movies", "I love Comedy movies", "I enjoy Comedy movies"],
     "responses": ["Great choice! Here are some Comedy movies you might like:", "Nice choice! Here are some Comedy movies you might like:", "Awesome choice! Here are some Comedy movies you might like:"]
+    },
+    {"tag": "action",
+    "patterns": ["I want to watch an action movie", "I like Action movies", "I love Action movies", "I enjoy Action movies"],
+    "responses": ["Great choice! Here are some Action movies you might like:", "Nice choice! Here are some Action movies you might like:", "Awesome choice! Here are some Action movies you might like:"]
+    },
+    {"tag": "horror",
+    "patterns": ["I want to watch a horror movie", "I like Horror movies", "I love Horror movies", "I enjoy Horror movies"],
+    "responses": ["Great choice! Here are some Horror movies you might like:", "Nice choice! Here are some Horror movies you might like:", "Awesome choice! Here are some Horror movies you might like:"]
     }
 ]
 }
